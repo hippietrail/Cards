@@ -14,10 +14,10 @@ struct SettingsView: View {
     @State var presentedSheet: SheetSection?
     
     @AppStorage("leftOptionIcon") var leftOptionIcon: String = "hand.thumbsdown.circle"
-    @AppStorage("leftOptionTitle") var leftOptionTitle: String = "Forgot"
+    @AppStorage("leftOptionTitle") var leftOptionTitle: String = "Forgotten"
     
     @AppStorage("rightOptionIcon") var rightOptionIcon: String = "hand.thumbsup.circle"
-    @AppStorage("rightOptionTitle") var rightOptionTitle: String = "Knew"
+    @AppStorage("rightOptionTitle") var rightOptionTitle: String = "Known"
     
     enum SheetSection: String, Identifiable {
         case left, right
@@ -89,7 +89,7 @@ struct SettingsView: View {
         #if os(iOS)
         .scrollContentBackground(.hidden)
         #endif
-        .navigationTitle("Cards swipes")
+        .navigationTitle("Card swiping")
         .toolbar {
             ToolbarItem {
                 Button {

@@ -20,7 +20,7 @@
 		C652B57B28EC955100F2A08D /* HapticGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652B57A28EC955100F2A08D /* HapticGenerator.swift */; };
 		C670298628E20C440027D293 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C670298528E20C440027D293 /* CardContentView.swift */; };
 		C670298828E24EA80027D293 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C670298728E24EA80027D293 /* Stats.swift */; };
-		C692ACF128E0A74B00CDEE1A /* CardsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692ACF028E0A74B00CDEE1A /* CardsListViewModel.swift */; };
+		C692ACF128E0A74B00CDEE1A /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692ACF028E0A74B00CDEE1A /* CardListViewModel.swift */; };
 		C6DF111828E0AAE500AEE15B /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF111728E0AAE500AEE15B /* VisualEffectBlur.swift */; };
 		C6FCF7F32A6DA99E009F37C9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCF7F22A6DA99E009F37C9 /* SettingsView.swift */; };
 		C6FCF7F62A6DB1F7009F37C9 /* SymbolPicker in Frameworks */ = {isa = PBXBuildFile; productRef = C6FCF7F52A6DB1F7009F37C9 /* SymbolPicker */; };
@@ -44,7 +44,7 @@
 		C652B57A28EC955100F2A08D /* HapticGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticGenerator.swift; sourceTree = "<group>"; };
 		C670298528E20C440027D293 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
 		C670298728E24EA80027D293 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
-		C692ACF028E0A74B00CDEE1A /* CardsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewModel.swift; sourceTree = "<group>"; };
+		C692ACF028E0A74B00CDEE1A /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		C6DF111728E0AAE500AEE15B /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		C6FCF7F22A6DA99E009F37C9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +136,7 @@
 		C692ACEF28E0A72600CDEE1A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C692ACF028E0A74B00CDEE1A /* CardsListViewModel.swift */,
+				C692ACF028E0A74B00CDEE1A /* CardListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 				C6FCF7F32A6DA99E009F37C9 /* SettingsView.swift in Sources */,
 				C609270228E35D7700EE0873 /* AddView.swift in Sources */,
 				C611A4C428E1A5FE00D98CA4 /* CardView.swift in Sources */,
-				C692ACF128E0A74B00CDEE1A /* CardsListViewModel.swift in Sources */,
+				C692ACF128E0A74B00CDEE1A /* CardListViewModel.swift in Sources */,
 				C670298628E20C440027D293 /* CardContentView.swift in Sources */,
 				C60926FE28E31B8E00EE0873 /* Cards.xcdatamodeld in Sources */,
 				C611A4C628E1A5FE00D98CA4 /* CardStackConfiguration.swift in Sources */,

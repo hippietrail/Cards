@@ -1,5 +1,5 @@
 //
-//  CardsStats.swift
+//  CardStats.swift
 //  Cards
 //
 //  Created by Armin on 9/27/22.
@@ -10,13 +10,13 @@ import SwiftUI
 struct Stats: View {
     
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var model: CardsListViewModel
+    @EnvironmentObject var model: CardListViewModel
     
     @AppStorage("leftOptionIcon") var leftOptionIcon: String = "hand.thumbsdown.circle"
-    @AppStorage("leftOptionTitle") var leftOptionTitle: String = "Forgot"
+    @AppStorage("leftOptionTitle") var leftOptionTitle: String = "Forgotten"
     
     @AppStorage("rightOptionIcon") var rightOptionIcon: String = "hand.thumbsup.circle"
-    @AppStorage("rightOptionTitle") var rightOptionTitle: String = "Knew"
+    @AppStorage("rightOptionTitle") var rightOptionTitle: String = "Known"
     
     var body: some View {
         NavigationStack {
@@ -34,11 +34,11 @@ struct Stats: View {
     var content: some View {
         List {
             Section {
-                ForEach(model.forgotCards) { card in
+                ForEach(model.forgottenCards) { card in
                     Text("\(card.front ?? ""): \(card.back ?? "")")
                 }
                 
-                if model.forgotCards.isEmpty {
+                if model.forgottenCards.isEmpty {
                     Text("The \(leftOptionTitle) list is empty")
                         .frame(maxWidth: .infinity)
                         .foregroundStyle(.secondary)
@@ -53,11 +53,11 @@ struct Stats: View {
             #endif
             
             Section {
-                ForEach(model.knewCards) { card in
+                ForEach(model.knownCards) { card in
                     Text("\(card.front ?? ""): \(card.back ?? "")")
                 }
                 
-                if model.knewCards.isEmpty {
+                if model.knownCards.isEmpty {
                     Text("The \(rightOptionTitle) list is empty")
                         .frame(maxWidth: .infinity)
                         .foregroundStyle(.secondary)
@@ -91,10 +91,10 @@ struct Stats: View {
     }
 }
 
-struct CardsStats_Previews: PreviewProvider {
+struct CardStats_Previews: PreviewProvider {
     struct Preview: View {
         
-        @StateObject var model = CardsListViewModel()
+        @StateObject var model = CardListViewModel()
         
         var body: some View {
             Stats()

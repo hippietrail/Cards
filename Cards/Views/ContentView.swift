@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var moc
-    @StateObject var model = CardsListViewModel()
+    @StateObject var model = CardListViewModel()
     @FetchRequest(sortDescriptors: [SortDescriptor(\.creationDate)]) var cards: FetchedResults<Card>
     
     @State private var showAdd: Bool = false
@@ -22,10 +22,10 @@ struct ContentView: View {
     @State private var backText : String = ""
     
     @AppStorage("leftOptionIcon") var leftOptionIcon: String = "hand.thumbsdown.circle"
-    @AppStorage("leftOptionTitle") var leftOptionTitle: String = "Forgot"
+    @AppStorage("leftOptionTitle") var leftOptionTitle: String = "Forgotten"
     
     @AppStorage("rightOptionIcon") var rightOptionIcon: String = "hand.thumbsup.circle"
-    @AppStorage("rightOptionTitle") var rightOptionTitle: String = "Knew"
+    @AppStorage("rightOptionTitle") var rightOptionTitle: String = "Known"
     
     var body: some View {
         NavigationStack {
@@ -55,8 +55,8 @@ struct ContentView: View {
                         .font(.largeTitle)
                     
                     Text(cards.isEmpty ?
-                         "Cards list is empty, add cards!" :
-                         "Finally, the list is empty. You can check the stats or reload cards."
+                         "Card list is empty, add cards!" :
+                         "Finally, the list is empty. You can check the stats or reload the cards."
                     )
                     .font(.system(.title3, design: .rounded))
                     .fontWeight(.medium)
@@ -73,9 +73,9 @@ struct ContentView: View {
                 ) { card, direction in
                     switch direction {
                     case .left:
-                        model.addForgotCard(card)
+                        model.addForgottenCard(card)
                     case .right:
-                        model.addKnewCard(card)
+                        model.addKnownCard(card)
                     }
                 } content: { card, direction, isOnTop in
                     CardContentView(
