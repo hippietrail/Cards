@@ -1,7 +1,7 @@
 <p align="center">
   <img src="Cards/Resources/Assets.xcassets/AppIcon.appiconset/512x512@2x.png" height="192">
   <h1 align="center">Swift Mind</h1>
-	<h4 align="center">A Simple flash cards app for iOS and macOS</h4>
+	<h4 align="center">A Simple flashcard app for iOS and macOS</h4>
 </p>
 
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-black?logo=swift)
